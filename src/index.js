@@ -6,7 +6,13 @@ import Web3 from 'web3'
 
 const connect = async () => {
   const provider = new WalletConnectProvider({
-    infuraId: "6860c8330f19440e8fc89a8724780538" // Required
+    infuraId: "6860c8330f19440e8fc89a8724780538", // Required
+    qrcodeModalOptions: {
+      mobileLinks: [
+        "trust",
+        "metamask",
+      ],
+    }
   });
 
   //  Enable session (triggers QR Code modal)
